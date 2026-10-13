@@ -3,31 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Restaurant</title>
 
     <style>
         body
         {
             background-color: #E7E2DC;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #Page
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
         #Main
         {
             background-color: #FAF8F4;
+            width: 1000px;
+            height: 600px;
+        }
+
+        header
+        {
+            background-color: rgb(249, 242, 242);
 
             display: flex;
             justify-content: center;
             align-items: center;
+            
+            padding-bottom: 0px;
+            border-bottom: 1px solid gray;
+        }
+
+        section
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
 
         #Name
         {
             color: #B96649;
-            font-family: Georgia;
-            font-weight: 100;
-
-            padding-left: 50px;
-            
+            font-family: garamond;
+            font-size: 30px;
+            padding-bottom: 20px;       
         }
 
         nav
@@ -35,58 +60,108 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: row;   
-            width: 100%;
+            padding: 10px 150px 10px 150px;
         }
 
         nav a
         {
             color: black;
-            font-family: Arial, Helvetica, sans-serif;
             text-decoration: none;
-
-            
             padding: 10px;
+        }
+
+        #HeaderButton
+        {
+            background-color: #B96649;
+        }
+
+        #SectionButton
+        {
+            background-color: black;
         }
 
         .Button
         {
-            color: white;
-            background-color: #B96649;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: small;
             border-radius: 32px;
             padding: 5px 10px 5px 10px;
         }
 
-        #NavButton
+        .Button a
         {
-            
+            color: white;
+            text-decoration: none;
+            font-size: small;
         }
 
+        .NavLink:hover
+        {
+            color: white;
+            background-color: #B96649;
+            border-radius: 32px;
+            transition-property: background-color;
+            transition-duration: 400ms;
+            transition-timing-function: ease-in;
+        }
+
+        #SectionButton a:hover
+        {
+            color: #B96649;
+            transition-property: color;
+            transition-duration: 200ms;
+            transition-timing-function: ease-in;
+        }
+
+        h1
+        {
+            font-family: serif;
+            font-size: 50px;
+            margin: 20px 0px 5px 0px;
+        }
+
+        p
+        {
+            margin-top: 5px;
+        }
+        
+        img
+        {
+            margin-top: 10px;
+            width: 600px;
+            height: auto;
+            border-radius: 8px;
+        }
     </style>
-
 </head>
+
 <body>
-    
-    <section>
-
+    <div ID="Page">
         <div ID="Main">
-
+            <header>
             <h1 ID="Name">Savoria</h1>
 
             <nav>
-                <a href="">Home</a>
-                <a href="">Menu</a>
-                <a href="">Gallery</a>
-                <a href="">Reservations</a>
-                <a href="">Location</a>
-
-                <div class="Button" ID="NavButton">Reserved a Table</div>
-
+                <a class="NavLink" href="">Home</a>
+                <a class="NavLink" href="">Menu</a>
+                <a class="NavLink" href="">Gallery</a>
+                <a class="NavLink" href="">Reservations</a>
+                <a class="NavLink" href="">Location</a>
             </nav>
-        </div>
-    </section>
 
+            <div class="Button" ID="HeaderButton">
+                <a href="">Reserve a Table</a>
+            </div>
+            </header>
+            <section>
+                <h1>Comfort Food, Crafted Daily</h1>
+                <p>Seasonal Ingredients, warm hospitality, and a space to slow down.</p>
+
+                <div class="Button" ID="SectionButton">
+                <a href="">Reserve a Table</a>
+                </div>
+                <img src="food.png">
+            </section>
+        </div>
+    </div>
 </body>
+
 </html>
